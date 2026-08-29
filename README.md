@@ -22,27 +22,31 @@ This repository contains the official implementation of the research paper: **"V
 ---
 
 ## 🏗️ System Architecture & Pipeline
+
+```text
 [ Input Meeting Audio (.wav / .mp3) ]
-│
-▼
-┌───────────────────────┐
-│  Speaker Diarization  │ ──► (Pyannote / PyTorch Pipeline)
-└───────────────────────┘
-│
-▼
-┌───────────────────────┐
-│ Vietnamese Speech-2-Text│ ──► (Segmented Transcript Generation)
-└───────────────────────┘
-│
-▼
-┌───────────────────────┐
-│ Structured Formatting │ ──► (Timeline, Speaker IDs, Metadata)
-└───────────────────────┘
-│
-▼
-┌───────────────────────┐
-│  Supabase Cloud DB    │ ──► (PostgreSQL + pgvector Semantic Search)
-└───────────────────────┘
+                 │
+                 ▼
+     ┌───────────────────────┐
+     │  Speaker Diarization  │ ──► (Pyannote / PyTorch Pipeline)
+     └───────────────────────┘
+                 │
+                 ▼
+     ┌───────────────────────┐
+     │ Vietnamese Speech-2-Text│ ──► (Segmented Transcript Generation)
+     └───────────────────────┘
+                 │
+                 ▼
+     ┌───────────────────────┐
+     │ Structured Formatting │ ──► (Timeline, Speaker IDs, Metadata)
+     └───────────────────────┘
+                 │
+                 ▼
+     ┌───────────────────────┐
+     │  Supabase Cloud DB    │ ──► (PostgreSQL + pgvector Semantic Search)
+     └───────────────────────┘
+```
+
 ---
 
 ## ✨ Key Features
@@ -56,7 +60,7 @@ This repository contains the official implementation of the research paper: **"V
 
 ## 📂 Project Structure
 
-```bash
+```text
 ├── Audio Mind.py                  # Main application entry point
 ├── upload_file_window.py          # Audio upload & batch preprocessing module
 ├── transcript_result_window.py   # Diarization & transcription viewer UI
@@ -65,33 +69,54 @@ This repository contains the official implementation of the research paper: **"V
 ├── ui_kit.py                      # UI components and styling utilities
 ├── requirements.txt               # Project dependencies and model packages
 └── README.md                      # Academic documentation & reproduction guide
-🚀 Getting Started
-Prerequisites
-Python >= 3.10
+```
 
-CUDA-compatible GPU recommended for accelerated PyTorch audio inferencing.
+---
 
-Supabase account with configured database credentials.
+## 🚀 Getting Started
 
-Installation
-1. Clone the repository:
-git clone [https://github.com/sh1kaku59/scientific-and-technological-research.git](https://github.com/sh1kaku59/scientific-and-technological-research.git)
-cd scientific-and-technological-research
-2. Create and activate a virtual environment:
-python -m venv venv
-# On Windows:
-venv\Scripts\activate
-# On Linux/macOS:
-source venv/bin/activate
-3. Install dependencies:
-pip install -r requirements.txt
+### Prerequisites
 
-Running the Application
+- Python `>= 3.10`
+- CUDA-compatible GPU recommended for accelerated PyTorch audio inferencing.
+- Supabase account with configured database credentials.
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/sh1kaku59/scientific-and-technological-research.git](https://github.com/sh1kaku59/scientific-and-technological-research.git)
+   cd scientific-and-technological-research
+   ```
+
+2. **Create and activate a virtual environment:**
+   ```bash
+   python -m venv venv
+   # On Windows:
+   venv\Scripts\activate
+   # On Linux/macOS:
+   source venv/bin/activate
+   ```
+
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+### Running the Application
+
 Launch the desktop workflow and transcription interface:
+```bash
 python "Audio Mind.py"
+```
 
-📖 Citation
+---
+
+## 📖 Citation
+
 If you find this research or code useful in your academic work, please cite our paper published in Springer CCIS:
+
+```bibtex
 @inproceedings{vscribe_fdse2025,
   title={V-Scribe: Structured Transcription of Vietnamese Speech for Digital Knowledge Management},
   author={Huynh, Huu Nghia and Nhan, Minh Duc and Phan, Van Bao and Nguyen, Vu Huy and Vu, Ngoc Minh},
@@ -103,10 +128,12 @@ If you find this research or code useful in your academic work, please cite our 
   publisher={Springer Nature Singapore},
   doi={10.1007/978-981-95-4721-0_23}
 }
+```
 
-👥 Authors & Contributions
-Ngoc Minh Vu (Co-Author) – GitHub | LinkedIn | Email
+---
 
-Research Team: Huu Nghia Huynh, Minh Duc Nhan, Van Bao Phan, Vu Huy Nguyen.
+## 👥 Authors & Contributions
 
-Affiliation: Faculty of Information Technology, Van Lang University, Ho Chi Minh City, Vietnam.
+- **Ngoc Minh Vu (Co-Author)** – [GitHub](https://github.com/sh1kaku59) | [LinkedIn](https://linkedin.com/in/vungocminh9702) | [Email](mailto:wanbitido090@gmail.com)
+- **Research Team:** Huu Nghia Huynh, Minh Duc Nhan, Van Bao Phan, Vu Huy Nguyen.
+- **Affiliation:** Faculty of Information Technology, Van Lang University, Ho Chi Minh City, Vietnam.

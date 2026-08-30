@@ -160,4 +160,4 @@ If you use this research or codebase in your academic work, please cite our Spri
 - **Authors:** Huu Nghia Huynh, Minh Duc Nhan, Van Bao Phan, Vu Huy Nguyen, **Ngoc Minh Vu (Co-Author)**.
 - **Contact:** [wanbitido090@gmail.com](mailto:wanbitido090@gmail.com) | [LinkedIn Profile](https://linkedin.com/in/vungocminh9702)
 - **Affiliation:** Faculty of Information Technology & Faculty of Mechanical - Electrical and Computer Engineering, Van Lang University, Ho Chi Minh City, Vietnam.
-- **Affiliation:** Faculty of Information Technology & Faculty of Mechanical - Electrical and Computer Engineering, Van Lang University, Ho Chi Minh City, Vietnam[cite: 6].
+- **Affiliation:** Faculty of Information Technology & Faculty of Mechanical - Electrical and Computer Engineering, Van Lang University, Ho Chi Minh City, Vietnam.
